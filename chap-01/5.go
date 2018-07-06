@@ -5,8 +5,6 @@ import (
 	"strings"
 )
 
-var result []string
-
 func main() {
 	target := "I am an NLPer"
 	kick(target, 2)
