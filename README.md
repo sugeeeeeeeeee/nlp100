@@ -1,4 +1,4 @@
-# nlp100-go
+# [言語処理100本ノック 2015年](http://www.cl.ecei.tohoku.ac.jp/nlp100/)
 
-腕試しで[言語処理100本ノック 2015年](http://www.cl.ecei.tohoku.ac.jp/nlp100/)をgolangでやってみた
+腕試しでgolangでやってみた
 
