@@ -19,8 +19,9 @@ func kick(target string, n int) {
 
 func ngram(target []string, n int) {
 	max := len(target) - n + 1
+	result := make([][]string, max)
 	for i := 0; i < max; i++ {
-		fmt.Printf("%v,", strings.Join(target[i:i+n], ""))
+		result[i] = target[i : i+n]
 	}
-	fmt.Printf("\n")
+	fmt.Println(result)
 }
