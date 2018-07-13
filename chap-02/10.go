@@ -7,9 +7,8 @@ import (
 )
 
 func main() {
-	file, err := os.Open("./chap-02/hightemp.txt")
-	if err != nil {
-	}
+	file, _ := os.Open("./chap-02/hightemp.txt")
+	defer file.Close()
 	var ret []string
 	i := 0
 	sc := bufio.NewScanner(file)
