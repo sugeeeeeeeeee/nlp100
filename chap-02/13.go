@@ -10,6 +10,8 @@ import (
 func main() {
 	col1, _ := os.Open("./chap-02/col1.txt")
 	col2, _ := os.Open("./chap-02/col2.txt")
+	defer col1.Close()
+	defer col2.Close()
 	ret1 := fileread(col1)
 	ret2 := fileread(col2)
 
