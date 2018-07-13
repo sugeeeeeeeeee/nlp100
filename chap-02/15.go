@@ -15,6 +15,7 @@ var (
 func main() {
 	register()
 	col1, _ := os.Open("./chap-02/col1.txt")
+	defer col1.Close()
 	fmt.Println(strings.Join(tail(col1, intFlag), "\n"))
 }
 
