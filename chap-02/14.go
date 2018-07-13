@@ -15,7 +15,7 @@ var (
 func main() {
 	register()
 	col1, _ := os.Open("./chap-02/col1.txt")
-	fmt.Println(strings.Join(tail(col1, intFlag), "\n"))
+	fmt.Println(strings.Join(head(col1, intFlag), "\n"))
 }
 
 func register() {
@@ -25,15 +25,11 @@ func register() {
 	flag.Parse()
 }
 
-func tail(f *os.File, n int) []string {
+func head(f *os.File, n int) []string {
 	var ret []string
 	sc := bufio.NewScanner(f)
 	for i := 0; sc.Scan(); i++ {
-		if n-1 < i {
-			break
-		} else {
-			ret = append(ret, sc.Text())
-		}
+		ret = append(ret, sc.Text())
 	}
-	return ret
+	return ret[0:n]
 }
